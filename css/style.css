@@ -1,0 +1,89 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.image-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-section {
+  background-color: #f8f9fa; /* Màu nền nhẹ */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* Giới hạn chiều cao ảnh */
+  object-fit: cover; /* Giữ tỉ lệ ảnh đẹp */
+  object-position: center 70%; /* Focus xuống dưới một chút */
+
+  border-radius: 12px; /* Bo góc ảnh */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Đổ bóng */
+
+  /* Animation xuất hiện */
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Keyframes cho animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animation khi hover */
+.image-section img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.invitation {
+  flex: 1;
+  padding: 30px;
+}
+
+.invitation h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #b23b3b;
+  font-size: 48px;
+}
+
+.invitation p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+#countdown {
+  margin-top: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #b23b3b;
+}
