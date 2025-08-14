@@ -87,3 +87,37 @@ body {
   font-weight: bold;
   color: #b23b3b;
 }
+/* --- Responsive cho điện thoại --- */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Chuyển sang bố cục dọc */
+    margin: 20px;
+  }
+
+  .image-section {
+    padding: 5px;
+  }
+
+  .image-section img {
+    max-height: 300px; /* Giảm chiều cao ảnh cho mobile */
+    object-position: center 65%; /* Giữ focus xuống một chút */
+  }
+
+  .invitation {
+    padding: 20px;
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  .invitation h1 {
+    font-size: 36px; /* Chữ tiêu đề nhỏ hơn để vừa màn hình */
+  }
+
+  .invitation p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  #countdown {
+    font-size: 20px;
+  }
+}
